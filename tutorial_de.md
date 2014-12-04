@@ -19,26 +19,15 @@ Für Leute, die das Tutorial gegenlesen, macht es das Lesen aber vielleicht inte
 Installation
 ------------
 
-Wir werden in diesem Tutorial das Wurst-Plugin für Eclipse benutzen. Um dies zu installieren sind die folgenden Schritte notwendig:
+Wir werden in diesem Tutorial das Wurst-Plugin für Eclipse benutzen. Um dies und alle weiteren Wurstscript features zu installieren gibt es zwei möglichkeiten:
 
-1. Eclipse Classic herunterladen: [Eclipse Downloads](http://www.eclipse.org/downloads/)
-2. Das Heruntergeladene Paket kann an einer beliebigen Stelle entpackt werden. Im entpackten Ordner befindet sich die Anwendung eclipse, welche wir nun starten.
-3. Um das Wurst-Plugin zu installieren gehen wir in das Menü unter "Help -> Install New Software"
-	Dort tragen wir nun die Update-Seite für das Plugin ein, indem wir auf "Add..." klicken.
-	Als "Location" geben wir "http://sunayama.de/WurstUpdt/site" ein und als "Name" geben wir "Wurst" ein.
-	Nun müssen wir nur noch die Update-Seite auswählen, dann in der Liste "Wurst IDE support" markieren und mit
-	einem Klick auf "Next" fortfahren. Die Warnung während der Installation kann ignoriert werden.
-	Nach der Installation muss Eclipse neu gestartet werden.
+All in one Pack für die einfache und schnelle installtion (empfohlen):
 
+1. Das Archiv herunterladen: [64-Bit](https://dl.dropboxusercontent.com/u/103859688/Wurstscript.rar)
+2. Entpacke das Archiv in ein beliebiges Zielverzeichnis
+3. Nutze die .bat Dateien um die einzelnen Komponenten zu starten
 
-Außerdem brauchen wir noch das Wurstpack:  
-[Download 32 Bit Version](https://dl.dropbox.com/u/103859688/WURST/Wurstpack32.rar)  
-[Download 64 Bit Version](https://dl.dropbox.com/u/103859688/WURST/Wurstpack64.rar)  
-Die benötigte Version hängt nicht von deinem Betriebsystem ab, sondern von deiner Java Version!  
-
-Um den Wurstpack zu installieren entpackage das Archiv in ein belibiges Verzeichnis, und führe dann die "updater.jar aus.
-
-Weitere Tipps bezüglich der Installation kannst du [hier](http://peq.github.com/WurstScript/installation.html) finden.
+[Manuelle Installation] (http://peq.github.com/WurstScript/installation.html)
 
 Das Wurstpack beinhaltet den Worldeditor mit eingebautem Wurst-Compiler und es beinhaltet die Standard-Bibliothek.
 	
@@ -548,17 +537,17 @@ Tip: Verusche das Problem aufzuteilen, für Zahlen die größer als 20 sind und 
 
 While Schleifen sind sehr ähnlich zu For Schleifen. Jedoch besitzen diese keine Laufvariablen sondern haben nur ein Abbruchkriterium.
 Es wird also ein Codeabschnitt so lange durchlaufen, bis eine gewisse Aussage falsch ist.
-Eine While Schleife erstellt man mit dem Schlüsselwort *while*, danach folgt in Klammern die Aussage.
+Eine While Schleife erstellt man mit dem Schlüsselwort *while*, danach folgt das Abbruchkriterium.
 Eine normale While Schleife sieht bspw. so aus:
 	while(a > b)
 		print("Irgendwas")
   
 
-While Schleifen müssen endlich sein, d.h. die Aussage, welche bei jedem Durchlauf geprüft wird, muss irgedwann falsch sein, damit die Schleife zu einem Ende kommt.  
+While Schleifen sollten endlich sein, d.h. das Abbruchkriterium, welche bei jedem Durchlauf geprüft wird, muss irgedwann erfüllt sein, damit die Schleife zu einem Ende kommt.  
 Beispiel einer While Schleife welche nicht terminiert (zu einem Ende kommt):
 	while(true)
 		print("endlos")
-Eine solche Schleife hätte zur Folge, dass Warcraft abstützt!!!
+Eine solche Schleife hätte zur Folge, dass der Aktuelle Thread in Warcraft abstürzt.
 
 ####Übung 3.3
 
@@ -567,8 +556,11 @@ Was wird die Konsole ausgeben?
 		int i = 1.5
 		while(i < 35)
 			i = i * i
-			print("done")
-		
+			print(i.toString()) //Gibt den aktuellen wert von i aus
+			
+Zu Überprüfung der Lösung darf die Konsole verwendet werden.
+
+
 
 	
 
